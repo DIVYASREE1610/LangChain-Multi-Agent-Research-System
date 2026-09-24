@@ -1,8 +1,177 @@
-# LangChain-Multi-Agent-Research-System
+# LangChain Multi-Agent Research System
+
+A powerful multi-agent research system built with LangChain that autonomously researches topics, gathers information, writes comprehensive reports, and evaluates their quality using AI-powered agents.
+
+<p align="center">
+  <strong>🔬 Research Automation • 🤖 Multi-Agent Orchestration • 📝 Intelligent Report Generation</strong>
+</p>
+
+---
+
+## 🌟 Features
+
+- **Multi-Agent Architecture**: Specialized agents for searching, reading, writing, and critiquing
+- **Automated Web Research**: Intelligent web search with Tavily API
+- **Smart Content Extraction**: Advanced web scraping with multiple fallback strategies
+- **AI-Powered Report Generation**: Automatically generates structured research reports
+- **Quality Evaluation**: Built-in critic agent for report validation and scoring
+- **Interactive UI**: Streamlit-based user interface for easy interaction
+- **Pipeline Orchestration**: Seamless coordination of multiple agents
+
+---
 
 
+
+### Agent Responsibilities
+
+- **Search Agent**: Discovers relevant information across the web using Tavily
+- **Reader Agent**: Extracts clean, readable content from URLs
+- **Writer Chain**: Composes structured, professional research reports
+- **Critic Chain**: Evaluates reports and provides improvement suggestions
+
+---
+
+## 🛠️ Technologies Used
+
+| Technology | Purpose |
+|-----------|---------|
+| **LangChain** | Multi-agent orchestration and chain management |
+| **GROQ** | Language model for agents and chains |
+| **Streamlit** | Interactive web UI |
+| **Tavily API** | Web search and information retrieval |
+| **BeautifulSoup4** | HTML parsing and content extraction |
+| **Trafilatura** | Web content extraction |
+| **Readability-lxml** | Article content extraction |
+| **Python-dotenv** | Environment configuration management |
+| **Rich** | Terminal output formatting |
+
+---
+
+## 📋 Prerequisites
+
+- Python 3.11 or higher
+- Groq API Key
+- Tavily API Key
+
+---
+
+## 🚀 Installation
+
+### 1. Clone the Repository
+
+```bash
+git clone https://github.com/yourusername/LangChain-Multi-Agent-Research-System.git
+cd LangChain-Multi-Agent-Research-System
+```
+
+### 2. Create Environment (Conda)
+
+```bash
 conda create -n langagent python=3.11 -y
-
 conda activate langagent
+```
 
-pip install -r  requirements.txt
+
+### 3. Install Dependencies
+
+```bash
+pip install -r requirements.txt
+```
+
+### 4. Configure Environment Variables
+
+Create a `.env` file in the project root:
+
+```bash
+GROQ_API_KEY=your_groq_api_key_here
+TAVILY_API_KEY=your_tavily_api_key_here
+```
+
+
+## 💡 Usage
+
+### Run with Streamlit UI 
+
+```bash
+streamlit run app.py
+```
+
+Then open `http://localhost:8501` in your browser.
+
+### Run as a Script
+
+```bash
+python main.py
+```
+
+Edit the `topic` variable in `main.py` to research different topics.
+
+---
+
+## 📁 Project Structure
+
+```
+LangChain-Multi-Agent-Research-System/
+│
+├── src/
+│   ├── __init__.py
+│   │
+│   ├── agents/
+│   │   ├── __init__.py
+│   │   └── agents.py           # Search, Reader, Writer & Critic agents
+│   │
+│   ├── pipelines/
+│   │   ├── __init__.py
+│   │   └── pipeline.py         # Research workflow orchestration
+│   │
+│   └── tools/
+│       ├── __init__.py
+│       └── tools.py            # Search and web scraping tools
+│
+├── .gitignore                  # Git ignored files
+├── app.py                      # Streamlit application
+├── main.py                     # Main application entry point
+├── LICENSE                     # Project license
+├── README.md                   # Project documentation
+└── requirements.txt             # Python dependencies
+```
+
+---
+
+## 🔄 Workflow
+
+1. **User Input**: Enter a research topic via UI or script
+2. **Search Phase**: Search agent queries the web using Tavily
+3. **Reading Phase**: Reader agent extracts content from relevant URLs
+4. **Writing Phase**: Writer chain synthesizes findings into a structured report
+5. **Review Phase**: Critic chain evaluates the report and provides scores
+6. **Output**: Display final report with feedback and scores
+
+---
+
+## 📊 Example Output
+
+The system generates reports with:
+- Comprehensive introduction and background
+- Key findings with detailed explanations
+- Well-sourced conclusions
+- Structured sections and proper formatting
+- Quality scores from 1-10
+
+---
+
+
+## 📄 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+---
+
+## 🙏 Acknowledgments
+
+- Built with [LangChain](https://langchain.com/)
+- Search powered by [Tavily](https://tavily.com)
+- UI built with [Streamlit](https://streamlit.io/)
+- Inspired by agentic AI research patterns
+
+---
