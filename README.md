@@ -7,6 +7,11 @@ A powerful multi-agent research system built with LangChain that autonomously re
 </p>
 
 ---
+## 🚀 Live Demo
+
+The project is deployed using Streamlit and can be accessed through the live deployment link.
+ https://multi-agent-research-system-25fr.onrender.com
+
 
 ## 🌟 Features
 
